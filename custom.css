@@ -1,27 +1,62 @@
 div.warn {    
     background-color: #fcf2f2;
     border-color: #dFb5b4;
-    border-left: 5px solid #dfb5b4;
+    border-top: 15px solid #dfb5b4;
     padding: 0.5em;
     }
 
-div.exercise {    
+div.task {    
     background-color: #B0E0E6;
     border-color: #B0E0E6;
-    border-left: 5px solid #1E90FF;
+    border-top: 15px solid #1E90FF;
     padding: 0.5em;
     }
 
 div.info {    
     background-color: #F5F5DC;
     border-color: #F5F5DC;
-    border-left: 5px solid #DAA520;
+    border-top: 15px solid #DAA520;
     padding: 0.5em;
     }
 
 div.interlude {    
     background-color: #E6E6FA;
     border-color: #E6E6FA;
-    border-left: 5px solid #4B0082;
+    border-top: 15px solid #4B0082;
     padding: 0.5em;
+}
+
+select.nbform {
+    width: 120px;
+}
+
+kbd {
+
+    color: black;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    
+}
+
+
+#ipython_notebook:before{
+    content: '';
+    float:left;
+    display:inline-block;
+    background-image: url(acse_logo.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 40px;
+    height:30px;
+    background-size: 30px;
+}
+
+.arrow-right {
+    width:5px;
+    height:00;
+    display:inline-block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid black;
 }
