@@ -60,3 +60,55 @@ kbd {
     border-bottom: 10px solid transparent;
     border-left: 10px solid black;
 }
+
+
+ /* main settings for the visible "expander" element */
+  input.expander + p + *:before, /*handle extra p tag inserted after heading tags*/
+  input.expander + *:not(p):before { /*everything else normal */
+    content: "\f196 "; /*fa-plus-square-o - these codes can be found on the detail page for each fa icon*/
+    font-family: FontAwesome;
+    cursor: pointer;
+    width: 1em;
+    display: inline-block;
+    /*font-size: larger;*/
+    color: blue !important;
+  }
+
+  input.expander + p + * {
+    display: inline-block;
+  }
+
+  input.expander + i {
+    font-style: normal;
+  }
+
+  /* change the icon in the expanded state, i.e. checkbox checked = expanded */
+  input.expander:checked + p + *:before,
+  input.expander:checked + *:not(p):before {
+    content: "\f147 "; /*fa-minus-square-o*/
+  }
+
+  /* alternative caret icon look */
+  input.expander.caret + p + *:before,
+  input.expander.caret + *:not(p):before {
+    content: "\f0da";
+  }
+
+  input.expander.caret:checked + p + *:before,
+  input.expander.caret:checked + *:not(p):before {
+    content: "\f0d7";
+  }
+
+  input.expander + p + * + *,
+  input.expander + *:not(p) + * {
+/*    transition: all 0.5s ease-in-out; */
+  }
+
+  input.expander:not(:checked) + p + * + *,
+  input.expander:not(:checked) + *:not(p) + * {
+    overflow-y: hidden;
+    height: 0;
+    transform: scaleX(0) scaleY(0);
+    opacity: 0;
+    margin: 0;
+  }
